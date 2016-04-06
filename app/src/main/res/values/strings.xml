@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">NDTV</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_splash_screen">NDTV</string>
+    <string name="emergency">EMERGENCY</string>
+    <string name="typeface_thin">fonts/Roboto-Thin.ttf</string>
+    <string name="typeface_bold">fonts/Roboto-Medium.ttf</string>
+
+</resources>

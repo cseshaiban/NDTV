@@ -1,0 +1,79 @@
+<resources>
+
+    <style name="MyMaterialTheme" parent="MyMaterialTheme.Base">
+
+    </style>
+
+    <style name="MyMaterialTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MyMaterialTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="MyMaterialTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+    </style>
+
+    <style name="line.light" parent="line">
+        <item name="android:background">@color/colorAccent</item>
+    </style>
+
+    <style name="line.vertical">
+        <item name="android:layout_width">1px</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/colorAccent</item>
+    </style>
+
+    <style name="line.dark" parent="line">
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="textLThin">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="typeface">@string/typeface_thin</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="textLBold">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">35sp</item>
+        <item name="typeface">@string/typeface_bold</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="textMThin">
+        <item name="android:textColor">@color/gray4</item>
+        <item name="android:textSize">18sp</item>
+        <item name="typeface">@string/typeface_thin</item>
+    </style>
+
+    <style name="textMBold">
+        <item name="android:textColor">@color/gray4</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="typeface">@string/typeface_bold</item>
+    </style>
+
+    <style name="textSThin">
+        <item name="android:textColor">@color/gray4</item>
+        <item name="android:textSize">15sp</item>
+        <item name="typeface">@string/typeface_thin</item>
+    </style>
+
+    <style name="textSBold">
+        <item name="android:textColor">@color/gray4</item>
+        <item name="android:textSize">15sp</item>
+        <item name="typeface">@string/typeface_bold</item>
+
+    </style>
+
+</resources>

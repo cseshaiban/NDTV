@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/tblack">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        card_view:cardCornerRadius="2dp"
+        card_view:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/image_view"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <com.ndtv.shaiban.ndtv.util.TypefacedTextView
+                        android:id="@+id/name"
+                        style="@style/textMBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Shaiban Mukhtesar" />
+
+                    <com.ndtv.shaiban.ndtv.util.TypefacedTextView
+                        android:id="@+id/age"
+                        style="@style/textSBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Age: 23" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/line.light" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <com.ndtv.shaiban.ndtv.util.TypefacedTextView
+                        android:id="@+id/gender"
+                        style="@style/textSBold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:text="Gender:  Male" />
+
+                    <com.ndtv.shaiban.ndtv.util.TypefacedTextView
+                        android:id="@+id/city"
+                        style="@style/textSBold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:text="City : BANGALORE" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <com.ndtv.shaiban.ndtv.util.TypefacedTextView
+                        android:id="@+id/bloodgroup"
+                        style="@style/textSBold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:text="Blood group : A+" />
+
+                    <com.ndtv.shaiban.ndtv.util.TypefacedTextView
+                        android:id="@+id/phone"
+                        style="@style/textSBold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:text="Phone : 9620560912" />
+
+                </LinearLayout>
+
+                <com.ndtv.shaiban.ndtv.util.TypefacedTextView
+                    android:id="@+id/date"
+                    style="@style/textSBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="Date: 22 aug" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.ndtv.shaiban.ndtv.util.TypefacedTextView
+                    android:id="@+id/accept"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/background"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="ACCEPT" />
+
+                <com.ndtv.shaiban.ndtv.util.TypefacedTextView
+                    android:id="@+id/cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/background"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="CANCEL" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.ndtv.shaiban.ndtv.activities.SplashScreen"
+    tools:showIn="@layout/splash_screen">
+
+    <LinearLayout
+        android:id="@+id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.ndtv.shaiban.ndtv.util.TypefacedTextView
+            style="@style/textLBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="MY HEALTH" />
+
+        <com.ndtv.shaiban.ndtv.util.TypefacedTextView
+            style="@style/textLThin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Powered by NDTV Worldwide" />
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topPanel"
+        android:layout_gravity="center"
+        android:background="@color/tblack"
+        android:orientation="vertical">
+
+        <com.ndtv.shaiban.ndtv.util.TypefacedTextView
+            android:id="@+id/upcoming"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="18dp"
+            android:gravity="center"
+            android:text="UPCOMING APPOINTMENT"
+            android:textColor="@color/white"
+            android:textStyle="normal" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/splash_recycler_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/skip"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp" />
+
+        <TextView
+            android:id="@+id/skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="@dimen/margin10"
+            android:background="@drawable/round_corner_square"
+            android:text="S K I P"
+            android:textColor="@color/white" />
+
+
+    </FrameLayout>
+
+
+</RelativeLayout>
