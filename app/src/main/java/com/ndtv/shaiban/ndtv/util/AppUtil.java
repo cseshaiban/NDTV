@@ -52,22 +52,6 @@ public class AppUtil {
         return processedTime;
     }
 
-    public static String getDateFromDateTime(String inputDate) {
-        if (inputDate == null || inputDate.length() < 19) {
-            return "";
-        }
-        SimpleDateFormat formatter1, formatter2;
-        formatter1 = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
-        Date date = null;
-        try {
-            date = formatter1.parse(inputDate);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        formatter2 = new SimpleDateFormat("yyyy-MM-dd");
-        String processedDate = formatter2.format(date);
-        return processedDate;
-    }
 
     public static boolean compareDates(String appointmentTime) throws ParseException {
         try {
@@ -107,10 +91,6 @@ public class AppUtil {
         cal.setTime(sdf.parse(dt));
 
         cal.add(Calendar.DATE, 1); // change to next day
-
-//        String nextAvailableTime = "10:00:00";
-//        Date newdate = new SimpleDateFormat("HH:mm:ss").parse(nextAvailableTime);
-//        cal.setTime(newdate);
 
         cal.set(Calendar.HOUR,10);
         cal.set(Calendar.MINUTE, 0);
@@ -154,9 +134,9 @@ public class AppUtil {
             do {
                 PatientList patientList = new PatientList();
 
-                int id = cursor.getInt(0);
-                String name = cursor.getString(1);
-                String appointment = cursor.getString(2);
+                int id = cursor.getInt(cursor.getColumnIndexOrThrow("key_id"));
+                String name = cursor.getString(cursor.getColumnIndexOrThrow("key_name"));
+                String appointment = cursor.getString(cursor.getColumnIndexOrThrow("key_appointment_date_time"));
 
                 patientList.setId(id);
                 patientList.setName(name);

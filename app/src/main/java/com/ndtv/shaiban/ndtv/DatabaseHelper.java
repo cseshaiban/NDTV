@@ -17,7 +17,7 @@ import java.util.Locale;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String TAG = DatabaseHelper.class.getSimpleName();
-    private static final int VERSION_CODE = 101;
+    private static final int VERSION_CODE = 1;
     private static String DATABASE_NAME;
 
     static {
@@ -32,8 +32,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String CREATE_TABLE = "CREATE TABLE "
             + TABLE_NAME + "(" + KEY_ID + " INTEGER PRIMARY KEY," +
-             KEY_NAME + " TEXT," +
-             KEY_STATUS + " TEXT," +
+            KEY_NAME + " TEXT," +
+            KEY_STATUS + " TEXT," +
             KEY_APPOINTMENT_DATETIME + " DATETIME" + ")";
 
     private Context context;
@@ -64,7 +64,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public long addAcceptedAppointmentInBD(int id,String name, String status, String date) {
+    public long addAcceptedAppointmentInBD(int id, String name, String status, String date) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
@@ -82,12 +82,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         String filter = "accept";
 
-        Cursor c = db.query(true, TABLE_NAME, new String[]{KEY_ID,KEY_NAME,
-                        KEY_APPOINTMENT_DATETIME}, KEY_STATUS + " LIKE ?",
-                new String[]{"%" + filter + "%"}, null, null, null,
-                null);
+//        Cursor c = db.query(true, TABLE_NAME, new String[]{KEY_ID,KEY_NAME,
+//                        KEY_APPOINTMENT_DATETIME}, KEY_STATUS + " LIKE ?",
+//                new String[]{"%" + filter + "%"}, null, null, null,
+//                null);
 
-        return c;
+        return db.rawQuery("SELECT * FROM ndtvtable WHERE key_status like ? ORDER BY date(key_appointment_date_time) ASC ", new String[]{filter});
+
     }
 
     public Cursor fetchActedAppointments() {
