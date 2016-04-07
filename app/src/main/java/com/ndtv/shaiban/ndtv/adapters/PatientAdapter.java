@@ -138,7 +138,7 @@ public class PatientAdapter extends RecyclerView.Adapter<PatientAdapter.ViewHold
         try {
             Log.d("DELETE", "Position " + position);
             arraylist.remove(position);
-            notifyItemRemoved(position);
+            notifyDataSetChanged();
             Log.d("DELETE", "deleteApproved ");
 
 
